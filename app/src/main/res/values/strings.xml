@@ -2,6 +2,7 @@
     <string name="app_name">Nemesis</string>
 
     <string name="home_title">Welcome to the Nemesis app</string>
+    <string name="menu_title">Welcome back!</string>
     <string name="about">About</string>
     <string name="this_is_a_title">This is a title</string>
     <string name="about_content">This app is made by Bjorn Truye.</string>

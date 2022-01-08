@@ -4,13 +4,12 @@ import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.databinding.DataBindingUtil
-import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
-import com.example.android.nemesis.databinding.FragmentHomeBinding
+import com.example.android.nemesis.databinding.FragmentMenuBinding
 
-class HomeFragment : Fragment() {
-    lateinit var binding: FragmentHomeBinding
+class MenuFragment : Fragment() {
+    lateinit var binding: FragmentMenuBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -18,7 +17,7 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_menu, container, false)
 
         setOnClickListeners()
 
@@ -38,8 +37,8 @@ class HomeFragment : Fragment() {
     }
 
     private fun setOnClickListeners() {
-        binding.homeStartButton.setOnClickListener(
-            Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_menuFragment)
-        )
+        /*binding.startjokesButton.setOnClickListener (
+            Navigation.createNavigateOnClickListener(R.id.action_homeFragment2_to_jokeFragment)
+        )*/
     }
 }
