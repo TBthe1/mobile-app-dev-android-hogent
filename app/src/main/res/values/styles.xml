@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="home_title">
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textColorHint">@color/teal_200</item>
+        <item name="android:textSize">20sp</item>
+        <item name="lineSpacing">2dp</item>
+    </style>
+
+    <style name="about_content">
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textColorHint">@color/teal_200</item>
+        <item name="android:textSize">20sp</item>
+        <item name="lineSpacing">2dp</item>
+    </style>
+
+</resources>
