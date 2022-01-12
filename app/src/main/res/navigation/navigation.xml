@@ -25,5 +25,28 @@
         android:id="@+id/menuFragment"
         android:name="com.example.android.nemesis.screens.menu.MenuFragment"
         android:label="MenuFragment"
-        tools:layout="@layout/fragment_menu"/>
+        tools:layout="@layout/fragment_menu">
+        <action
+            android:id="@+id/action_menuFragment_to_gamesFragment"
+            app:destination="@id/gamesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gamesFragment"
+        android:name="com.example.android.nemesis.screens.games.GamesFragment"
+        android:label="GamesFragment" >
+        <action
+            android:id="@+id/action_gamesFragment_to_addGameFragment"
+            app:destination="@id/addGameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addGameFragment"
+        android:name="com.example.android.nemesis.screens.addGame.AddGameFragment"
+        android:label="AddGameFragment" >
+        <action
+            android:id="@+id/action_addGameFragment_to_gamesFragment"
+            app:destination="@id/gamesFragment" />
+        <action
+            android:id="@+id/action_addGameFragment_to_gamesFragment2"
+            app:destination="@id/gamesFragment" />
+    </fragment>
 </navigation>

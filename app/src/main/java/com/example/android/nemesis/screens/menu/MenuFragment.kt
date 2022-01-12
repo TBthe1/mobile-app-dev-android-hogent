@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.example.android.nemesis.R
@@ -38,8 +39,8 @@ class MenuFragment : Fragment() {
     }
 
     private fun setOnClickListeners() {
-        /*binding.startjokesButton.setOnClickListener (
-            Navigation.createNavigateOnClickListener(R.id.action_homeFragment2_to_jokeFragment)
-        )*/
+        binding.menuAllGamesButton.setOnClickListener(
+            Navigation.createNavigateOnClickListener(R.id.action_menuFragment_to_gamesFragment)
+        )
     }
 }
