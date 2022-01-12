@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.android.nemesis.HomeFragment"
+        android:name="com.example.android.nemesis.screens.home.HomeFragment"
         android:label="HomeFragment"
         tools:layout="@layout/fragment_home">
         <action
@@ -18,12 +18,12 @@
     </fragment>
     <fragment
         android:id="@+id/aboutFragment"
-        android:name="com.example.android.nemesis.AboutFragment"
+        android:name="com.example.android.nemesis.screens.utils.AboutFragment"
         android:label="AboutFragment"
         tools:layout="@layout/fragment_about"/>
     <fragment
         android:id="@+id/menuFragment"
-        android:name="com.example.android.nemesis.MenuFragment"
+        android:name="com.example.android.nemesis.screens.menu.MenuFragment"
         android:label="MenuFragment"
         tools:layout="@layout/fragment_menu"/>
 </navigation>

@@ -1,4 +1,4 @@
-package com.example.android.nemesis
+package com.example.android.nemesis.screens.home
 
 import android.os.Bundle
 import android.view.*
@@ -8,6 +8,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
+import com.example.android.nemesis.R
 import com.example.android.nemesis.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
