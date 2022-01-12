@@ -6,4 +6,6 @@
     <string name="about">About</string>
     <string name="this_is_a_title">This is a title</string>
     <string name="about_content">This app is made by Bjorn Truye.</string>
+    <string name="auth_client_id">qiMjtrZqShVQ0bxzt6VThUSa1GHsK4qO</string>
+    <string name="auth_domain">nemesis-android.eu.auth0.com</string>
 </resources>
