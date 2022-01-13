@@ -49,4 +49,9 @@
             android:id="@+id/action_addGameFragment_to_gamesFragment2"
             app:destination="@id/gamesFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.android.nemesis.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
 </navigation>
