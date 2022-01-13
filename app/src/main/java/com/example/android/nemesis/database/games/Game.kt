@@ -3,6 +3,7 @@ package com.example.android.nemesis.database.games
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.squareup.moshi.Json
 
 @Entity(tableName = "custom_game_table")
 data class Game(
@@ -10,10 +11,10 @@ data class Game(
     var gameId: Long = 0L,
 
     @ColumnInfo(name = "game_name")
-    var gameName: String = "",
+    @Json(name = "name") var gameName: String = "",
 
     @ColumnInfo(name = "game_desc")
-    var gameDesc: String = "",
+    @Json(name = "desc") var gameDesc: String = "",
 
     @ColumnInfo(name = "game_min_duration")
     var gameMinDuration: String = "",

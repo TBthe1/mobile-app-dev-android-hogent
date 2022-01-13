@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_house_door"
+        android:title="home" />
+    <item
+        android:id="@+id/gameOverviewFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_bar_chart_line"
+        android:title="DB" />
+    <item
+        android:id="@+id/gameOverviewFromAPIFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_globe"
+        android:title="API" />
+
+</menu>
