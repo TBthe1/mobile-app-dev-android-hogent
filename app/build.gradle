@@ -49,7 +49,7 @@ android {
 }
 
 dependencies {
-
+    //General
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.0'
     implementation 'com.google.android.material:material:1.4.0'
@@ -57,24 +57,35 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.test.ext:junit-ktx:1.1.3'
-    implementation 'androidx.room:room-common:2.3.0'
-    implementation 'androidx.room:room-ktx:2.3.0'
-    implementation 'com.auth0.android:auth0:2.+'
-    implementation 'androidx.security:security-crypto-ktx:1.1.0-alpha02'
+    implementation "android.arch.navigation:navigation-fragment-ktx:$version_navigation"
+    implementation "android.arch.navigation:navigation-ui-ktx:$version_navigation"
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
     testImplementation 'junit:junit:4.+'
     testImplementation 'org.hamcrest:hamcrest:2.2'
-    testImplementation "androidx.room:room-testing:2.2.6"
+
+    //Logging
+    implementation 'com.jakewharton.timber:timber:5.0.1'
+
+    //OAuth
+    implementation 'com.auth0.android:auth0:2.+'
+    implementation 'androidx.security:security-crypto-ktx:1.1.0-alpha02'
+
+    //Testing
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     testImplementation "org.robolectric:robolectric:4.5.1"
     testImplementation "androidx.arch.core:core-testing:2.1.0"
-    implementation "android.arch.navigation:navigation-fragment-ktx:$version_navigation"
-    implementation "android.arch.navigation:navigation-ui-ktx:$version_navigation"
-    implementation 'com.jakewharton.timber:timber:5.0.1'
-    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
-    // Add the Auth0 Android SDK
-    implementation 'com.auth0.android:auth0:2.+'
+
+    //Room
     kapt "androidx.room:room-compiler:2.3.0"
+    implementation 'androidx.room:room-common:2.3.0'
+    implementation 'androidx.room:room-ktx:2.3.0'
+    testImplementation "androidx.room:room-testing:2.2.6"
+
+    //Activity delegates
+    implementation "androidx.activity:activity-ktx:1.3.0"
+    implementation "androidx.fragment:fragment-ktx:1.3.6"
+
 }
 
 check.dependsOn ktlint

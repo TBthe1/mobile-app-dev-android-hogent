@@ -2,6 +2,7 @@ package com.example.android.nemesis
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.text.HtmlCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -30,6 +31,9 @@ class MainActivity : AppCompatActivity() {
 
         appBarConfiguration = AppBarConfiguration(navController.graph, drawerLayout)
         NavigationUI.setupWithNavController(navView, navController)
+
+        val titleString = "<font color=\"black\">" + getString(R.string.app_name) + "</font>"
+        supportActionBar?.setTitle(HtmlCompat.fromHtml(titleString, HtmlCompat.FROM_HTML_MODE_LEGACY))
     }
 
     override fun onStart() {

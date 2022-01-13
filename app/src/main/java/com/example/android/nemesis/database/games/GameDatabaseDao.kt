@@ -1,5 +1,6 @@
 package com.example.android.nemesis.database.games
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
@@ -22,6 +23,9 @@ interface GameDatabaseDao {
 
     @Query("DELETE FROM custom_game_table")
     suspend fun clear()
+
+    @Query("SELECT * FROM custom_game_table ORDER BY gameId DESC")
+    fun getAllGamesLive(): LiveData<List<Game>>
 
     @Query("SELECT * FROM custom_game_table ORDER BY gameId DESC")
     suspend fun getAllGames(): List<Game>

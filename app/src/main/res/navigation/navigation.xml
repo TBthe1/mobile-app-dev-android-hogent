@@ -28,11 +28,11 @@
         tools:layout="@layout/fragment_menu">
         <action
             android:id="@+id/action_menuFragment_to_gamesFragment"
-            app:destination="@id/gamesFragment" />
+            app:destination="@id/gameOverviewFragment" />
     </fragment>
     <fragment
-        android:id="@+id/gamesFragment"
-        android:name="com.example.android.nemesis.screens.games.GamesFragment"
+        android:id="@+id/gameOverviewFragment"
+        android:name="com.example.android.nemesis.screens.gameOverview.GameOverviewFragment"
         android:label="GamesFragment" >
         <action
             android:id="@+id/action_gamesFragment_to_addGameFragment"
@@ -44,10 +44,10 @@
         android:label="AddGameFragment" >
         <action
             android:id="@+id/action_addGameFragment_to_gamesFragment"
-            app:destination="@id/gamesFragment" />
+            app:destination="@id/gameOverviewFragment" />
         <action
             android:id="@+id/action_addGameFragment_to_gamesFragment2"
-            app:destination="@id/gamesFragment" />
+            app:destination="@id/gameOverviewFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
