@@ -54,4 +54,8 @@
         android:name="com.example.android.nemesis.login.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/gameOverviewFromAPIFragment"
+        android:name="com.example.android.nemesis.screens.gameOverviewFromAPI.GameOverviewFromAPIFragment"
+        android:label="GameOverviewFromAPIFragment" />
 </navigation>

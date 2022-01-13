@@ -8,6 +8,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.android.nemesis.R
 import com.example.android.nemesis.screens.gameOverviewFromAPI.GameApiStatus
+import timber.log.Timber
 
 // The adapter will adapt the game to get the data we need
 
@@ -35,6 +36,7 @@ fun ImageView.bindStatus(status: GameApiStatus?) {
             setImageResource(R.drawable.loading_animation)
         }
         GameApiStatus.ERROR -> {
+            Timber.i("GameApiStatus.ERROR")
             visibility = View.VISIBLE
             setImageResource(R.drawable.ic_connection_error)
         }
