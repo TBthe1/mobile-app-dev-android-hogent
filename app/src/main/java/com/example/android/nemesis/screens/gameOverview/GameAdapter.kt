@@ -5,10 +5,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.android.nemesis.database.games.Game
+import com.example.android.nemesis.database.games.DatabaseGame
 import com.example.android.nemesis.databinding.GameListItemBinding
 
-class GameAdapter(val clickListener: GamesListener) : ListAdapter<Game, ViewHolder>(GameDiffCallback()) {
+class GameAdapter(val clickListener: GamesListener) : ListAdapter<DatabaseGame, ViewHolder>(GameDiffCallback()) {
 
     // fill up the item you need (e.g. set texts and images)
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -23,13 +23,9 @@ class GameAdapter(val clickListener: GamesListener) : ListAdapter<Game, ViewHold
 
 class ViewHolder(val binding: GameListItemBinding) : RecyclerView.ViewHolder(binding.root) {
 
-    fun bind(clickListener: GamesListener, item: Game) {
+    fun bind(clickListener: GamesListener, item: DatabaseGame) {
         binding.gameNameTextview.text = item.gameName
-        binding.gameDescTextview.text = item.gameDesc
-//        binding.gameMinDurationTextview.text = item.gameMinDuration
-//        binding.gameMaxDurationTextview.text = item.gameMaxDuration
-//        binding.gameMinPlayersTextview.text = item.gameMinPlayers
-//        binding.gameMaxPlayersTextview.text = item.gameMaxPlayers
+        binding.gameDescTextview.text = item.gameSubtype
 
         binding.game = item
         binding.clickListener = clickListener
@@ -47,17 +43,17 @@ class ViewHolder(val binding: GameListItemBinding) : RecyclerView.ViewHolder(bin
     }
 }
 
-class GameDiffCallback : DiffUtil.ItemCallback<Game>() {
-    override fun areItemsTheSame(oldItem: Game, newItem: Game): Boolean {
+class GameDiffCallback : DiffUtil.ItemCallback<DatabaseGame>() {
+    override fun areItemsTheSame(oldItem: DatabaseGame, newItem: DatabaseGame): Boolean {
         return oldItem.gameId == newItem.gameId
     }
 
-    override fun areContentsTheSame(oldItem: Game, newItem: Game): Boolean {
+    override fun areContentsTheSame(oldItem: DatabaseGame, newItem: DatabaseGame): Boolean {
         return oldItem == newItem
         // works perfectly because it's a dataclass.
     }
 }
 
 class GamesListener(val clickListener: (gameID: Long) -> Unit) {
-    fun onClick(game: Game) = clickListener(game.gameId)
+    fun onClick(game: DatabaseGame) = clickListener(game.gameId)
 }

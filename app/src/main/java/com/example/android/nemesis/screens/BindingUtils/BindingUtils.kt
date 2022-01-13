@@ -2,13 +2,16 @@ package com.example.android.nemesis.screens.BindingUtils
 
 import android.view.View
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.core.net.toUri
 import androidx.databinding.BindingAdapter
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.android.nemesis.R
+import com.example.android.nemesis.domain.Game
 import com.example.android.nemesis.screens.gameOverviewFromAPI.GameApiStatus
 import timber.log.Timber
+import kotlin.random.Random
 
 // The adapter will adapt the game to get the data we need
 
@@ -43,5 +46,28 @@ fun ImageView.bindStatus(status: GameApiStatus?) {
         GameApiStatus.DONE -> {
             visibility = View.GONE
         }
+    }
+}
+
+@BindingAdapter("gameName")
+fun TextView.bindName(games: List<Game>?) {
+    games?.let {
+        text = games[0].gameName
+    }
+}
+
+@BindingAdapter("gameSubtype")
+fun TextView.bindSubtype(games: List<Game>?) {
+    games?.let {
+        text = games[0].gameSubtype
+    }
+}
+
+@BindingAdapter("randomGame")
+fun TextView.bindRandom(games: List<Game>?) {
+    games?.let {
+
+        var randomListNumber = Random.nextInt(it.size)
+        text = games[randomListNumber].gameName
     }
 }

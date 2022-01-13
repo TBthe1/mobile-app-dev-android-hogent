@@ -6,10 +6,16 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import com.example.android.nemesis.R
 import com.example.android.nemesis.databinding.FragmentGameOverviewFromApiBinding
 
 class GameOverviewFromAPIFragment : Fragment() {
+    private val viewModel: FromAPIViewModel by lazy {
+        val activity = requireNotNull(this.activity)
+        ViewModelProvider(this, FromAPIViewModel.Factory(activity.application)).get(FromAPIViewModel::class.java)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -21,7 +27,6 @@ class GameOverviewFromAPIFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val binding: FragmentGameOverviewFromApiBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_game_overview_from_api, container, false)
-        val viewModel = FromAPIViewModel()
 
         binding.viewModel = viewModel
         binding.lifecycleOwner = viewLifecycleOwner
