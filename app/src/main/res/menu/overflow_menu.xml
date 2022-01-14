@@ -4,4 +4,10 @@
     <item
         android:id="@+id/aboutFragment"
         android:title="About" />
+    <item
+        android:id="@+id/gameOverviewFragment"
+        android:title="@string/all_games" />
+    <item
+        android:id="@+id/loginFragment"
+        android:title="Login" />
 </menu>

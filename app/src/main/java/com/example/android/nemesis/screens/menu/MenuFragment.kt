@@ -46,5 +46,9 @@ class MenuFragment : Fragment() {
         binding.menuAllGamesButton.setOnClickListener(
             Navigation.createNavigateOnClickListener(R.id.action_menuFragment_to_gamesFragment)
         )
+
+        binding.menuLoginButton.setOnClickListener(
+            Navigation.createNavigateOnClickListener(R.id.action_menuFragment_to_loginFragment)
+        )
     }
 }

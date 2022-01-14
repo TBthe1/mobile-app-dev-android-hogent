@@ -23,19 +23,19 @@
             app:layout_constraintVertical_chainStyle="packed" />
 
         <Button
-            android:id="@+id/menuAllGamesButton"
             style="@style/ButtonBig"
+            android:id="@+id/menuAllGamesButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="@string/all_games_button"
+            android:text="@string/all_games"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/menuAboutButton" />
 
         <Button
-            android:id="@+id/menuAboutButton"
             style="@style/ButtonBig"
+            android:id="@+id/menuAboutButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
@@ -43,7 +43,19 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/home_title" />
+            app:layout_constraintTop_toBottomOf="@+id/home_title"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <Button
+            style="@style/ButtonBig"
+            android:id="@+id/menuLoginButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/menuAllGamesButton" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

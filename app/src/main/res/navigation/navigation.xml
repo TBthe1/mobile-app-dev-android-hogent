@@ -55,6 +55,15 @@
             app:popExitAnim="@anim/slide_out_right"
             app:popUpTo="@id/homeFragment"
             app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_menuFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/menuFragment"
+            app:popUpToInclusive="false" />
     </fragment>
     <fragment
         android:id="@+id/gameOverviewFragment"

@@ -19,7 +19,8 @@
                 android:background="?colorPrimaryDark"
                 android:theme="@style/customThemeOverlayBlack"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent">
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
             </androidx.appcompat.widget.Toolbar>
 
@@ -43,16 +44,23 @@
                 android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:menu="@menu/bottom_navigation_menu"
-                tools:layout_editor_absoluteX="0dp" />
+                tools:layout_editor_absoluteX="0dp"
+                app:itemIconTint="@color/white"
+                app:itemTextColor="@color/white"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <!-- Hamburger menu -->
         <com.google.android.material.navigation.NavigationView
             android:id="@+id/navView"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            app:menu="@menu/navdrawer_menu"
-            android:layout_gravity="start"/>
+            android:layout_gravity="start"
+            android:background="@color/secondaryColor"
+            android:paddingTop="60sp"
+            app:itemIconTint="@color/white"
+            app:itemTextColor="@color/white"
+            app:menu="@menu/navdrawer_menu" />
     </androidx.drawerlayout.widget.DrawerLayout>
 
 

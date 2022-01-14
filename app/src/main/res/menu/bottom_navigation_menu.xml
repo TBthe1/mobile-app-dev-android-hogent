@@ -4,16 +4,16 @@
         android:id="@+id/homeFragment"
         android:enabled="true"
         android:icon="@drawable/ic_house_door"
-        android:title="home" />
+        android:title="@string/home" />
     <item
         android:id="@+id/gameOverviewFragment"
         android:enabled="true"
         android:icon="@drawable/ic_bar_chart_line"
-        android:title="DB" />
+        android:title="@string/db" />
     <item
         android:id="@+id/gameOverviewFromAPIFragment"
         android:enabled="true"
         android:icon="@drawable/ic_globe"
-        android:title="API" />
+        android:title="@string/api" />
 
 </menu>
