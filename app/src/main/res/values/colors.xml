@@ -8,10 +8,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <!-- Colors from Material.io color tool
-    https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=e5474b&secondary.color=262425 -->
+    <!-- Colors (partly) from Material.io color tool -->
     <color name="primaryColor">#e5474b</color>
-    <color name="primaryLightColor">#ff7b77</color>
+    <color name="primaryLightColor">#e5474b</color>
     <color name="primaryDarkColor">#ac0023</color>
     <color name="secondaryColor">#262425</color>
     <color name="secondaryLightColor">#4e4c4d</color>

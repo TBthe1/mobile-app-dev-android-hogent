@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Nemesis</string>
+    <string name="home_title">Bienvenue sur l\'application Nemesis</string>
+    <string name="menu_title">Content de te revoir!</string>
+    <string name="all_games_button">Tous les jeux</string>
+    <string name="about">Sur</string>
+    <string name="this_is_a_title">C\'est un titre</string>
+    <string name="about_content">Cette application est faite par Bjorn Truye.</string>
+</resources>
