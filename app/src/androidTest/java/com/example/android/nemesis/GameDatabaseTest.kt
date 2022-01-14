@@ -4,8 +4,7 @@ import android.util.Log
 import androidx.room.Room
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
-
-import com.example.android.nemesis.database.games.Game
+import com.example.android.nemesis.database.games.DatabaseGame
 import com.example.android.nemesis.database.games.GameDatabase
 import com.example.android.nemesis.database.games.GameDatabaseDao
 import kotlinx.coroutines.runBlocking
@@ -49,8 +48,8 @@ class GameDatabaseTest {
 
     @Test
     @Throws(Exception::class)
-    fun insertAndGetJoke() = runBlocking {
-        val game = Game()
+    fun insertAndGetGame() = runBlocking {
+        val game = DatabaseGame()
         gameDao.insert(game)
         val lastGame = gameDao.getLastGame()
         assertEquals(lastGame?.gameName, "")

@@ -2,7 +2,7 @@ package com.example.android.nemesis
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.core.text.HtmlCompat
+import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -27,13 +27,14 @@ class MainActivity : AppCompatActivity() {
 
         Timber.i("MainActivity is created")
 
+        // use material toolbar instead of default app bar
+        val toolbar: Toolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(toolbar)
+
         val navController = this.findNavController(R.id.navHostFragment)
         NavigationUI.setupActionBarWithNavController(this, navController, drawerLayout)
 
         appBarConfiguration = AppBarConfiguration(navController.graph, drawerLayout)
-
-        val titleString = "<font color=\"black\">" + getString(R.string.app_name) + "</font>"
-        supportActionBar?.title = HtmlCompat.fromHtml(titleString, HtmlCompat.FROM_HTML_MODE_LEGACY)
 
         // setting the selected home item bottom nav menu
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)

@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.android.nemesis.database.games.GameDatabaseDao
 
-class GameOverviewViewModelFactory(private val dataSource: GameDatabaseDao, private val application: Application) : ViewModelProvider.Factory {
+class GameOverviewViewModelFactory(private val dataSource: GameDatabaseDao, private val application: Application, private val adapter: GameAdapter) : ViewModelProvider.Factory {
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(GameOverviewViewModel::class.java)) {
             return GameOverviewViewModel(dataSource, application) as T

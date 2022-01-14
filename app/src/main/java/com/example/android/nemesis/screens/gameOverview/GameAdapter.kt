@@ -5,10 +5,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.android.nemesis.database.games.DatabaseGame
 import com.example.android.nemesis.databinding.GameListItemBinding
+import com.example.android.nemesis.domain.Game
 
-class GameAdapter(val clickListener: GamesListener) : ListAdapter<DatabaseGame, ViewHolder>(GameDiffCallback()) {
+class GameAdapter(val clickListener: GamesListener) : ListAdapter<Game, ViewHolder>(GameDiffCallback()) {
 
     // fill up the item you need (e.g. set texts and images)
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -23,7 +23,7 @@ class GameAdapter(val clickListener: GamesListener) : ListAdapter<DatabaseGame, 
 
 class ViewHolder(val binding: GameListItemBinding) : RecyclerView.ViewHolder(binding.root) {
 
-    fun bind(clickListener: GamesListener, item: DatabaseGame) {
+    fun bind(clickListener: GamesListener, item: Game) {
         binding.gameNameTextview.text = item.gameName
         binding.gameDescTextview.text = item.gameSubtype
 
@@ -43,17 +43,17 @@ class ViewHolder(val binding: GameListItemBinding) : RecyclerView.ViewHolder(bin
     }
 }
 
-class GameDiffCallback : DiffUtil.ItemCallback<DatabaseGame>() {
-    override fun areItemsTheSame(oldItem: DatabaseGame, newItem: DatabaseGame): Boolean {
+class GameDiffCallback : DiffUtil.ItemCallback<Game>() {
+    override fun areItemsTheSame(oldItem: Game, newItem: Game): Boolean {
         return oldItem.gameId == newItem.gameId
     }
 
-    override fun areContentsTheSame(oldItem: DatabaseGame, newItem: DatabaseGame): Boolean {
+    override fun areContentsTheSame(oldItem: Game, newItem: Game): Boolean {
         return oldItem == newItem
         // works perfectly because it's a dataclass.
     }
 }
 
 class GamesListener(val clickListener: (gameID: Long) -> Unit) {
-    fun onClick(game: DatabaseGame) = clickListener(game.gameId)
+    fun onClick(game: Game) = clickListener(game.gameId)
 }

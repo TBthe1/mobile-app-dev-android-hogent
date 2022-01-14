@@ -1,6 +1,7 @@
 package com.example.android.nemesis.repository
 
-import androidx.lifecycle.LiveData
+import androidx.lifecycle.MediatorLiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import com.example.android.nemesis.database.games.GameDatabase
 import com.example.android.nemesis.database.games.asDomainModel
@@ -19,14 +20,83 @@ import timber.log.Timber
 * Contains a LiveData object with games
 * Can refresh games
 * */
-
 class GameRepository(private val database: GameDatabase) {
+
+    // What if the games list depends on query params?
+    // --> The livedata source from the db will change!
+
+    /* -- Solution 1 -- */
+    /*MediatorLiveData
+    * Hold a reference to the livedata instances, and switch them when needed
+    * */
+
+    /* -- Solution 2 -- */
+    /*SwitchMap
+    * Helper function for livedata (uses a MediatorLiveData object in the background)
+    * */
 
     // Network call
     // get games from the database, but transform them with map
-    val games: LiveData<List<Game>> =
-        Transformations.map(database.gameDatabaseDao.getAllGamesLive()) {
+    val games = MediatorLiveData<List<Game>>()
+    val filter = MutableLiveData<String>(null)
+    val gamesSolution2 = Transformations.switchMap(filter) {
+            filter -> when (filter) {
+        "<10" -> Transformations.map(database.gameDatabaseDao.getUnder10GamesLive()) {
             it.asDomainModel()
+        }
+        "10-20" -> Transformations.map(database.gameDatabaseDao.getbetween1020GamesLive()) {
+            it.asDomainModel()
+        }
+        ">20" -> Transformations.map(database.gameDatabaseDao.getgreater20GamesLive()) {
+            it.asDomainModel()
+        }
+        else -> Transformations.map(database.gameDatabaseDao.getAllGamesLive()) {
+            it.asDomainModel()
+        }
+    }
+    }
+
+    // keep a reference to the original livedata
+    private var changeableLiveData = Transformations.map(database.gameDatabaseDao.getAllGamesLive()) {
+        it.asDomainModel()
+    }
+
+    // add the data to the mediator
+    init {
+        games.addSource(
+            changeableLiveData
+        ) {
+            games.setValue(it)
+        }
+    }
+
+    // Filter
+    fun addFilter(filter: String?) {
+        // remove the original source
+        games.removeSource(changeableLiveData)
+        // change the livedata object + apply filter
+        changeableLiveData = when (filter) {
+            "<10" -> Transformations.map(database.gameDatabaseDao.getUnder10GamesLive()) {
+                it.asDomainModel()
+            }
+            "10-20" -> Transformations.map(database.gameDatabaseDao.getbetween1020GamesLive()) {
+                it.asDomainModel()
+            }
+            ">20" -> Transformations.map(database.gameDatabaseDao.getgreater20GamesLive()) {
+                it.asDomainModel()
+            }
+            else -> Transformations.map(database.gameDatabaseDao.getAllGamesLive()) {
+                it.asDomainModel()
+            }
+        }
+        // add the data to the mediator
+        games.addSource(changeableLiveData) { games.setValue(it) }
+    }
+
+    // filter is now less complex
+    fun addFilterSolution2(filter: String?) {
+        // remove the original source
+        this.filter.value = filter
     }
 
     // Database call
@@ -47,8 +117,7 @@ class GameRepository(private val database: GameDatabase) {
         // create a Data Transfer Object (Dto)
         val newApiGame = ApiGame(
             gameName = newGame.gameName,
-            gameSubtype = newGame.gameSubtype
-        )
+            gameSubtype = newGame.gameSubtype)
         // use retrofit to put the game.
         // a put function usually returns the object that was put
 

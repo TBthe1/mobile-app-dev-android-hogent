@@ -37,6 +37,15 @@ interface GameDatabaseDao {
     @Query("SELECT * FROM custom_game_table ORDER BY gameId DESC")
     fun getAllGamesLive(): LiveData<List<DatabaseGame>>
 
+    @Query("SELECT * FROM custom_game_table WHERE LENGTH(game_name) < 10  ORDER BY gameId DESC")
+    fun getUnder10GamesLive(): LiveData<List<DatabaseGame>>
+
+    @Query("SELECT * FROM custom_game_table WHERE LENGTH(game_name) BETWEEN 10 AND 20  ORDER BY gameId DESC")
+    fun getbetween1020GamesLive(): LiveData<List<DatabaseGame>>
+
+    @Query("SELECT * FROM custom_game_table WHERE LENGTH(game_name) > 20  ORDER BY gameId DESC")
+    fun getgreater20GamesLive(): LiveData<List<DatabaseGame>>
+
     // get the game with the highest ID (last game added)
     @Query("SELECT * FROM custom_game_table ORDER BY gameId DESC LIMIT 1")
     suspend fun getLastGame(): DatabaseGame?
