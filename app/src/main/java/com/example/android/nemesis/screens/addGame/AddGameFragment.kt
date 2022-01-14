@@ -53,7 +53,10 @@ class AddGameFragment : Fragment() {
 
                 if (insertNewGameName.text.toString() != "" && insertNewGameSubtype.text.toString() != "") {
                     // navigate back to the games screen
-                    view?.findNavController()?.navigate(AddGameFragmentDirections.actionAddGameFragmentToGamesFragment())
+                    // view?.findNavController()?.navigate(AddGameFragmentDirections.actionAddGameFragmentToGamesFragment())
+                    view?.findNavController()?.navigate(R.id.action_addGameFragment_to_gameOverviewFragment)
+
+                    // Navigation.createNavigateOnClickListener(R.id.action_addGameFragment_to_gameOverviewFragment)
                 }
 
                 viewModel.saveEventDone()

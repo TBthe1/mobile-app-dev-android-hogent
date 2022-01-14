@@ -60,7 +60,7 @@ class GameOverviewFragment : Fragment() {
         })
 
         binding.addGameButton.setOnClickListener(
-            Navigation.createNavigateOnClickListener(R.id.addGameFragment)
+            Navigation.createNavigateOnClickListener(R.id.action_gameOverviewFragment_to_addGameFragment)
         )
 
         createChips(listOf("<10", "10-20", ">20"))
