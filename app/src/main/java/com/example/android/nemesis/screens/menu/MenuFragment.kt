@@ -39,6 +39,10 @@ class MenuFragment : Fragment() {
     }
 
     private fun setOnClickListeners() {
+        binding.menuAboutButton.setOnClickListener(
+            Navigation.createNavigateOnClickListener(R.id.action_menuFragment_to_aboutFragment)
+        )
+
         binding.menuAllGamesButton.setOnClickListener(
             Navigation.createNavigateOnClickListener(R.id.action_menuFragment_to_gamesFragment)
         )

@@ -13,6 +13,7 @@
         tools:layout_editor_absoluteX="-16dp" />
 
     <ScrollView
+        android:id="@+id/scrollviewAbout"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
@@ -27,11 +28,12 @@
         app:layout_constraintTop_toBottomOf="@+id/include">
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/aboutTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/about_content"
-            android:textSize="14sp"/>
+            android:textAlignment="center"
+            android:textSize="14sp" />
 
     </ScrollView>
 

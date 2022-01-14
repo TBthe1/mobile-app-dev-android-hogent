@@ -29,6 +29,11 @@
         <action
             android:id="@+id/action_menuFragment_to_gamesFragment"
             app:destination="@id/gameOverviewFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_right" />
     </fragment>
     <fragment
         android:id="@+id/gameOverviewFragment"
