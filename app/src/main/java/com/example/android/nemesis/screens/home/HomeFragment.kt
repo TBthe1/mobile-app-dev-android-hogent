@@ -10,6 +10,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.example.android.nemesis.R
 import com.example.android.nemesis.databinding.FragmentHomeBinding
+import kotlinx.android.synthetic.main.activity_main.*
 
 class HomeFragment : Fragment() {
     lateinit var binding: FragmentHomeBinding

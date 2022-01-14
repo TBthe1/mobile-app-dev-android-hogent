@@ -7,10 +7,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="gray">#5a5a5a</color>
 
     <!-- Colors (partly) from Material.io color tool -->
-    <color name="primaryColor">#e5474b</color>
-    <color name="primaryLightColor">#e5474b</color>
+    <color name="primaryColor">#ac0023</color>
+    <color name="primaryLightColor">#ac0023</color>
     <color name="primaryDarkColor">#ac0023</color>
     <color name="secondaryColor">#262425</color>
     <color name="secondaryLightColor">#4e4c4d</color>

@@ -3,8 +3,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Widget.MaterialComponents.Chip.Choice"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    style="@style/Widget.MaterialComponents.Chip.Choice"
+    android:textColor="@color/white"
     app:chipBackgroundColor="@color/selected_highlight"
-    app:checkedIconVisible="true"/>
+    app:chipStrokeColor="@color/black"
+    />

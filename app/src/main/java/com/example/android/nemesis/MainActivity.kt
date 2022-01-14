@@ -9,7 +9,6 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
-import kotlinx.android.synthetic.main.activity_main.*
 import timber.log.Timber
 
 class MainActivity : AppCompatActivity() {
@@ -29,6 +28,7 @@ class MainActivity : AppCompatActivity() {
 
         // use material toolbar instead of default app bar
         val toolbar: Toolbar = findViewById(R.id.toolbar)
+        toolbar.title = ""
         setSupportActionBar(toolbar)
 
         val navController = this.findNavController(R.id.navHostFragment)

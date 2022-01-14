@@ -95,25 +95,7 @@ Gebruikers hosten zelf matches en kunnen een overzicht bekijken van welke match(
 2) Statistieken van spelers bijhouden (aantal games gespeeld, gewonnen ...)
 
 ## Bekende bugs en problemen
-
-### 1) Inlezen van mockdata van RapidAPI
-
-Mockdata in Postman ziet er als volgt uit:
-```json
-{
-    "apiGames": {
-        "gameName": "Magic Maze",
-        "gameSubtype": "boardgame"
-    }
-}
-```
-
-Android Studio geeft volgende error:
-```html
-com.squareup.moshi.JsonDataException: Required value 'apiGames' (JSON name 'body') missing at $
-```
-
-### 2) Inlezen API webservices
+### 1) Inlezen API webservices
 
 De API van dit opleidingsonderdeel heeft nog een aantal bekende bugs zitten waardoor nog niet alle data opgevraagd kan worden. 
 
