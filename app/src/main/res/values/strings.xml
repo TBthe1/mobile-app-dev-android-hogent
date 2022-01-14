@@ -9,6 +9,7 @@
     <string name="menu_title">Welcome back!</string>
     <string name="all_games">All games</string>
     <string name="about">About</string>
+    <string name="menu">Menu</string>
     <string name="this_is_a_title">This is a title</string>
     <string name="about_content">This app is made by Bjorn Truye.</string>
 
@@ -30,6 +31,7 @@
     <string name="home">Home</string>
     <string name="db">DB</string>
     <string name="api">API</string>
+    <string name="add_game">Add game</string>
 
 
 </resources>

@@ -16,6 +16,7 @@ import com.auth0.android.callback.Callback
 import com.auth0.android.provider.WebAuthProvider
 import com.auth0.android.result.Credentials
 import com.auth0.android.result.UserProfile
+import com.example.android.nemesis.MainActivity
 import timber.log.Timber
 
 /**
@@ -142,5 +143,10 @@ class LoginFragment : Fragment() {
                     setLoggedInText()
                 }
             })
+    }
+
+    override fun onStart() {
+        super.onStart()
+        (activity as MainActivity).supportActionBar?.title = getString(R.string.login)
     }
 }

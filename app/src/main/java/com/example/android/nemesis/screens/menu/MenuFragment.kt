@@ -7,6 +7,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
+import com.example.android.nemesis.MainActivity
 import com.example.android.nemesis.R
 import com.example.android.nemesis.databinding.FragmentMenuBinding
 
@@ -50,5 +51,10 @@ class MenuFragment : Fragment() {
         binding.menuLoginButton.setOnClickListener(
             Navigation.createNavigateOnClickListener(R.id.action_menuFragment_to_loginFragment)
         )
+    }
+
+    override fun onStart() {
+        super.onStart()
+        (activity as MainActivity).supportActionBar?.title = getString(R.string.menu)
     }
 }

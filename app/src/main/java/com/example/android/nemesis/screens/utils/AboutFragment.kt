@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import com.example.android.nemesis.MainActivity
 import com.example.android.nemesis.R
 
 /**
@@ -31,5 +32,10 @@ class AboutFragment : Fragment() {
         titletext?.text = "About this app"
 
         return aboutFragment
+    }
+
+    override fun onStart() {
+        super.onStart()
+        (activity as MainActivity).supportActionBar?.title = getString(R.string.about)
     }
 }

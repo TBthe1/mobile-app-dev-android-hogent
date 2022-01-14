@@ -10,6 +10,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
+import com.example.android.nemesis.MainActivity
 import com.example.android.nemesis.R
 import com.example.android.nemesis.database.games.GameDatabase
 import com.example.android.nemesis.databinding.FragmentGameOverviewBinding
@@ -92,5 +93,10 @@ class GameOverviewFragment : Fragment() {
         for (chip in children) {
             chipGroup.addView(chip)
         }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        (activity as MainActivity).supportActionBar?.title = getString(R.string.all_games)
     }
 }

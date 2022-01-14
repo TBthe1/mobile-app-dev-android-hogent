@@ -45,6 +45,7 @@ class MainActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         Timber.i("onStart Called")
+        (this).supportActionBar?.title = getString(R.string.home)
     }
 
     override fun onSupportNavigateUp(): Boolean {

@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.example.android.nemesis.MainActivity
 import com.example.android.nemesis.R
 import com.example.android.nemesis.databinding.FragmentGameOverviewFromApiBinding
 
@@ -32,5 +33,10 @@ class GameOverviewFromAPIFragment : Fragment() {
         binding.lifecycleOwner = viewLifecycleOwner
 
         return binding.root
+    }
+
+    override fun onStart() {
+        super.onStart()
+        (activity as MainActivity).supportActionBar?.title = getString(R.string.api)
     }
 }

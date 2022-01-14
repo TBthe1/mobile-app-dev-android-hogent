@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
+import com.example.android.nemesis.MainActivity
 import com.example.android.nemesis.R
 import com.example.android.nemesis.database.games.GameDatabase
 import com.example.android.nemesis.databinding.FragmentAddGameBinding
@@ -64,5 +65,10 @@ class AddGameFragment : Fragment() {
         })
 
         return binding.root
+    }
+
+    override fun onStart() {
+        super.onStart()
+        (activity as MainActivity).supportActionBar?.title = getString(R.string.add_game)
     }
 }

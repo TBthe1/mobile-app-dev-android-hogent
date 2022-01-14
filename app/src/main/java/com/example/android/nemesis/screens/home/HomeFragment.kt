@@ -8,6 +8,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
+import com.example.android.nemesis.MainActivity
 import com.example.android.nemesis.R
 import com.example.android.nemesis.databinding.FragmentHomeBinding
 import kotlinx.android.synthetic.main.activity_main.*
@@ -46,6 +47,8 @@ class HomeFragment : Fragment() {
 
         Toast.makeText(context, "OnCreate: $numberOfOncreates - OCView: $numberOfOncreateViews", Toast.LENGTH_SHORT).show()
 
+        (activity as MainActivity).supportActionBar?.title = getString(R.string.home)
+
         return binding.root
     }
 
@@ -70,5 +73,10 @@ class HomeFragment : Fragment() {
         outState.putInt("onCreateViews", numberOfOncreateViews)
         outState.putInt("onCreates", numberOfOncreates)
         super.onSaveInstanceState(outState)
+    }
+
+    override fun onStart() {
+        super.onStart()
+        (activity as MainActivity).supportActionBar?.title = getString(R.string.home)
     }
 }

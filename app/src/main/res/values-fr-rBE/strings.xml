@@ -5,6 +5,7 @@
     <string name="menu_title">Content de te revoir!</string>
     <string name="all_games">Tous les jeux</string>
     <string name="about">Sur</string>
+    <string name="menu">Menu</string>
     <string name="this_is_a_title">C\'est un titre</string>
     <string name="about_content">Cette application est faite par Bjorn Truye.</string>
 
@@ -26,5 +27,6 @@
     <string name="home">Home</string>
     <string name="db">DB</string>
     <string name="api">API</string>
+    <string name="add_game">Ajouter un jeu</string>
 
 </resources>
