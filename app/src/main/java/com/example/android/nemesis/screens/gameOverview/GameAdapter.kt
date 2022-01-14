@@ -54,6 +54,6 @@ class GameDiffCallback : DiffUtil.ItemCallback<Game>() {
     }
 }
 
-class GamesListener(val clickListener: (gameID: Long) -> Unit) {
-    fun onClick(game: Game) = clickListener(game.gameId)
+class GamesListener(val clickListener: (gameName: String) -> Unit) {
+    fun onClick(game: Game) = clickListener(game.gameName)
 }

@@ -10,6 +10,7 @@
         <entry key="..\:/Users/Bjorn/Desktop/Local repos/HoGent/3e jaar/Android/Nemesis/app/src/main/res/drawable/ic_globe.xml" value="0.5703125" />
         <entry key="..\:/Users/Bjorn/Desktop/Local repos/HoGent/3e jaar/Android/Nemesis/app/src/main/res/drawable/ic_house_door.xml" value="0.3828125" />
         <entry key="..\:/Users/Bjorn/Desktop/Local repos/HoGent/3e jaar/Android/Nemesis/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3828125" />
+        <entry key="..\:/Users/Bjorn/Desktop/Local repos/HoGent/3e jaar/Android/Nemesis/app/src/main/res/drawable/red_underline.xml" value="0.4322916666666667" />
         <entry key="..\:/Users/Bjorn/Desktop/Local repos/HoGent/3e jaar/Android/Nemesis/app/src/main/res/drawable/schild_transparant_background.xml" value="0.5703125" />
         <entry key="..\:/Users/Bjorn/Desktop/Local repos/HoGent/3e jaar/Android/Nemesis/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/Bjorn/Desktop/Local repos/HoGent/3e jaar/Android/Nemesis/app/src/main/res/layout/chip.xml" value="0.36666666666666664" />
@@ -22,8 +23,8 @@
         <entry key="..\:/Users/Bjorn/Desktop/Local repos/HoGent/3e jaar/Android/Nemesis/app/src/main/res/layout/fragment_games.xml" value="0.4467120181405896" />
         <entry key="..\:/Users/Bjorn/Desktop/Local repos/HoGent/3e jaar/Android/Nemesis/app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="..\:/Users/Bjorn/Desktop/Local repos/HoGent/3e jaar/Android/Nemesis/app/src/main/res/layout/fragment_login.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/Bjorn/Desktop/Local repos/HoGent/3e jaar/Android/Nemesis/app/src/main/res/layout/fragment_menu.xml" value="0.5541666666666667" />
-        <entry key="..\:/Users/Bjorn/Desktop/Local repos/HoGent/3e jaar/Android/Nemesis/app/src/main/res/layout/game_list_item.xml" value="0.33" />
+        <entry key="..\:/Users/Bjorn/Desktop/Local repos/HoGent/3e jaar/Android/Nemesis/app/src/main/res/layout/fragment_menu.xml" value="0.5" />
+        <entry key="..\:/Users/Bjorn/Desktop/Local repos/HoGent/3e jaar/Android/Nemesis/app/src/main/res/layout/game_list_item.xml" value="0.75" />
         <entry key="..\:/Users/Bjorn/Desktop/Local repos/HoGent/3e jaar/Android/Nemesis/app/src/main/res/layout/header_fragment.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/Bjorn/Desktop/Local repos/HoGent/3e jaar/Android/Nemesis/app/src/main/res/layout/text_item_view.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/Bjorn/Desktop/Local repos/HoGent/3e jaar/Android/Nemesis/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.36666666666666664" />

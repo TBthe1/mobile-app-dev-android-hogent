@@ -15,4 +15,7 @@
     <string name="you_are_not_logged_in_yet">Vous n\'êtes pas encore connecté</string>
 
     <string name="insert_the_new_game_name_here">Insérez le nouveau jeu ici</string>
+    <string name="name_of_the_game">Nom du jeu</string>
+    <string name="subtype_of_the_game">Sous-type de jeu</string>
+    <string name="delete_all_games_from_database">Supprimer tous les jeux de la base de données</string>
 </resources>
