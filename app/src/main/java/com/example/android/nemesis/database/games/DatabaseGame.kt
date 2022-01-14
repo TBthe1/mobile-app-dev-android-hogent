@@ -19,10 +19,10 @@ data class DatabaseGame(
     var gameId: Long = 0L,
 
     @ColumnInfo(name = "game_name")
-    @Json(name = "name") var gameName: String = "",
+    @Json(name = "gameName") var gameName: String = "",
 
     @ColumnInfo(name = "game_subtype")
-    @Json(name = "subtype") var gameSubtype: String = ""
+    @Json(name = "gameSubtype") var gameSubtype: String = ""
 )
 
 // convert Game to ApiGame

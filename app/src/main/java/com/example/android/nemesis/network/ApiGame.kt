@@ -10,16 +10,16 @@ import com.squareup.moshi.Json
 
 /*Container helps us parse the body into multiple games*/
 data class ApiGameContainer(
-    @Json(name = "body")
+    @Json(name = "apiGames")
     val apiGames: List<ApiGame>
 )
 
 /*ApiGame, representing a game from the network*/
 data class ApiGame(
-    @Json(name = "name")
+    @Json(name = "gameName")
     var gameName: String = "",
 
-    @Json(name = "subtype")
+    @Json(name = "gameSubtype")
     var gameSubtype: String = ""
 )
 
