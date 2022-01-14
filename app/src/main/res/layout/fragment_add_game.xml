@@ -43,6 +43,7 @@
             tools:text="@string/insert_the_new_game_subtype_here" />
 
         <Button
+            style="@style/ButtonBig"
             android:id="@+id/save_button"
             android:layout_width="379dp"
             android:layout_height="wrap_content"

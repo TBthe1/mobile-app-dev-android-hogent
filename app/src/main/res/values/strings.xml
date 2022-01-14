@@ -24,5 +24,9 @@
     <string name="subtype_of_the_game">Subtype of the game</string>
     <string name="delete_all_games_from_database">Delete all games from database</string>
 
+    <string name="imported_data_from_the_api">Imported data from the API</string>
+    <string name="game_name_from_the_api">Game name from the API</string>
+    <string name="game_subtype_from_the_api">Game subtype from the API</string>
+
 
 </resources>

@@ -28,7 +28,6 @@ class MainActivity : AppCompatActivity() {
 
         // use material toolbar instead of default app bar
         val toolbar: Toolbar = findViewById(R.id.toolbar)
-        toolbar.title = ""
         setSupportActionBar(toolbar)
 
         val navController = this.findNavController(R.id.navHostFragment)

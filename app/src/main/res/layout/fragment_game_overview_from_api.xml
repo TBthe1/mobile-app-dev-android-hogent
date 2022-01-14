@@ -24,46 +24,53 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="32dp"
+            android:id="@+id/imageGameAPI"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="16dp"
             app:imageUrl="@{viewModel.games.get(0).gameUri}"
-            app:layout_constraintBottom_toTopOf="@+id/textView4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_chainStyle="packed" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView4"
-            android:layout_width="379dp"
-            android:layout_height="0dp"
-
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
+            android:id="@+id/importedDataFromAPI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:gravity="center_horizontal"
-            app:gameName="@{viewModel.games}"
-            app:layout_constraintBottom_toTopOf="@+id/textView3"
+            android:textAppearance="?textAppearanceHeadline5"
+            android:text="@string/imported_data_from_the_api"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2"
-            tools:text="api response" />
+            app:layout_constraintTop_toBottomOf="@+id/imageGameAPI"
+            tools:text="@string/imported_data_from_the_api" />
 
         <TextView
-            android:id="@+id/textView3"
-            android:layout_width="379dp"
-            android:layout_height="0dp"
-
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
+            android:id="@+id/gameSubtypeAPI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:gravity="center_horizontal"
+            android:textAppearance="?textAppearanceHeadline6"
             app:gameSubtype="@{viewModel.games}"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView4"
-            tools:text="api response" />
+            app:layout_constraintTop_toBottomOf="@+id/gameNameAPI"
+            tools:text="@string/game_subtype_from_the_api" />
+
+        <TextView
+            android:id="@+id/gameNameAPI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal"
+            android:textAppearance="?textAppearanceHeadline6"
+            app:gameName="@{viewModel.games}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/importedDataFromAPI"
+            tools:text="@string/game_name_from_the_api" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -12,5 +12,5 @@ data class Game(
 ) {
 
     // Hardcoded image url to demo Glide
-    val gameUri = "https://cf.geekdo-images.com/Z8yghP3v9BKvAALFWCziMw__thumb/img/OkqtAOk0Sd7IRlXlX8-2G0kS4Ng=/fit-in/200x150/filters:strip_icc()/pic3717830.png"
+    val gameUri = "https://cf.geekdo-images.com/wJfDIveg2zpTGn8E1WzEpA__imagepage/img/XatZTK6uZOSFgC_L706I94wydE4=/fit-in/900x600/filters:no_upscale():strip_icc()/pic3268473.jpg"
 }

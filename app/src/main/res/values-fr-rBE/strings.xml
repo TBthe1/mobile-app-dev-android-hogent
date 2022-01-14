@@ -20,4 +20,8 @@
     <string name="subtype_of_the_game">Sous-type de jeu</string>
     <string name="delete_all_games_from_database">Supprimer tous les jeux de la base de données</string>
 
+    <string name="imported_data_from_the_api">Données importées depuis l\'API</string>
+    <string name="game_name_from_the_api">Nom du jeu de l\'API</string>
+    <string name="game_subtype_from_the_api">Sous-type de jeu de l\'API</string>
+
 </resources>

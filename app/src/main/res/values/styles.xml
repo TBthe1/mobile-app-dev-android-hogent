@@ -3,7 +3,12 @@
 
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!--items here can overwrite existing items from Material design  -->
+        <item name="textAppearanceHeadline5">@style/CustomHeadline5</item>
         <item name="textAppearanceHeadline6">@style/CustomHeadline6</item>
+    </style>
+
+    <style name="CustomHeadline5" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="android:textSize">20sp</item>
     </style>
 
     <style name="CustomHeadline6" parent="TextAppearance.MaterialComponents.Headline6">
