@@ -12,4 +12,10 @@
     <string name="this_is_a_title">This is a title</string>
     <string name="about_content">This app is made by Bjorn Truye.</string>
 
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
+    <string name="logged_in">Logged in</string>
+    <string name="you_are_logged_in">You\'re logged in!</string>
+    <string name="you_are_not_logged_in_yet">You are not logged in yet</string>
+
 </resources>

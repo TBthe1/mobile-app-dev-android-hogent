@@ -75,7 +75,7 @@ class LoginFragment : Fragment() {
     }
 
     private fun setLoggedInText() {
-        if (loggedIn) { loggedInText.text = "you're logged in" } else { loggedInText.text = "not logged in" }
+        if (loggedIn) { loggedInText.text = getString(R.string.you_are_logged_in) } else { loggedInText.text = getString(R.string.you_are_not_logged_in_yet) }
     }
 
     private fun loginWithBrowser() {

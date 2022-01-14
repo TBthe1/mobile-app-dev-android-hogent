@@ -12,12 +12,13 @@ import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.Headers
 import retrofit2.http.POST
+import timber.log.Timber
 
-// Final urls
+// Final example urls
 // https://api.geekdo.com/xmlapi2/collection?username=nemesisgent
 // https://api.geekdo.com/xmlapi2/thing?id=266504
 
-private const val BASE_URL = "https://api.geekdo.com/xmlapi2/"
+private const val BASE_URL = "https://androidnemesisapi.p.rapidapi.com/"
 
 // create moshi object
 private val moshi = Moshi.Builder()
@@ -32,16 +33,16 @@ private val client = OkHttpClient.Builder()
 
 // Scalars Converter = converter for strings to plain text bodies
 private val retrofit = Retrofit.Builder()
+    .addConverterFactory(MoshiConverterFactory.create(moshi))
     .addCallAdapterFactory(CoroutineCallAdapterFactory())
-    .addConverterFactory(MoshiConverterFactory.create(moshi).asLenient())
     .baseUrl(BASE_URL)
     .client(client)
     .build()
 
 interface GameApiService {
 
-    @Headers("Content-Type: application/json")
-    @GET("collection?username=nemesisgent")
+    @Headers("x-rapidapi-key: 3f5bd416e6msh337cea95ca735b8p14ba9ajsn1ceb80d95615")
+    @GET("mock/data")
     fun getGames(): Deferred<ApiGameContainer>
 
     /*
@@ -56,6 +57,9 @@ object GameApi {
     // lazy properties = thread safe --> can only be initialized once at a time
     // adds extra safety to our 1 instance we need.
     val retrofitService: GameApiService by lazy {
+
+        Timber.i("Received the retrofitService")
+
         retrofit.create(GameApiService::class.java)
     }
 
