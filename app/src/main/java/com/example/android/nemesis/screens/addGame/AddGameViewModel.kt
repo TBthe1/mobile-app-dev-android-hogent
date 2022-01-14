@@ -1,6 +1,7 @@
 package com.example.android.nemesis.screens.addGame
 
 import android.app.Application
+import android.widget.Toast
 import androidx.lifecycle.*
 import com.example.android.nemesis.database.games.DatabaseGame
 import com.example.android.nemesis.database.games.GameDatabase
@@ -30,12 +31,17 @@ class AddGameViewModel(val database: GameDatabaseDao, application: Application) 
         _saveEvent.value = false
     }
 
-    fun saveGame(newGame: String) {
-        viewModelScope.launch {
-            val game = Game()
-            game.gameName = newGame
-            // saveGameToDatabase(game)
-            saveGameWithRepository(game)
+    fun saveGame(newGameName: String, newGameSubtype: String) {
+        if (newGameName == "" || newGameSubtype == "") {
+            Toast.makeText(getApplication(), "Please fill in all the fields", Toast.LENGTH_SHORT).show()
+        } else {
+            viewModelScope.launch {
+                val game = Game()
+                game.gameName = newGameName
+                game.gameSubtype = newGameSubtype
+                // saveGameToDatabase(game)
+                saveGameWithRepository(game)
+            }
         }
     }
 

@@ -12,6 +12,8 @@ import androidx.navigation.findNavController
 import com.example.android.nemesis.R
 import com.example.android.nemesis.database.games.GameDatabase
 import com.example.android.nemesis.databinding.FragmentAddGameBinding
+import kotlinx.android.synthetic.main.fragment_add_game.*
+import timber.log.Timber
 
 class AddGameFragment : Fragment() {
 
@@ -42,9 +44,18 @@ class AddGameFragment : Fragment() {
 
         viewModel.saveEvent.observe(viewLifecycleOwner, Observer {
             saveEvent -> if (saveEvent) {
-                viewModel.saveGame(binding.insertNewGameName.text.toString())
-                // navigate back to the games screen
-                view?.findNavController()?.navigate(AddGameFragmentDirections.actionAddGameFragmentToGamesFragment())
+                Timber.i("Koekoek")
+
+                viewModel.saveGame(
+                    binding.insertNewGameName.text.toString(),
+                    binding.insertNewGameSubtype.text.toString()
+                )
+
+                if (insertNewGameName.text.toString() != "" && insertNewGameSubtype.text.toString() != "") {
+                    // navigate back to the games screen
+                    view?.findNavController()?.navigate(AddGameFragmentDirections.actionAddGameFragmentToGamesFragment())
+                }
+
                 viewModel.saveEventDone()
             }
         })

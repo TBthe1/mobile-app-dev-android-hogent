@@ -17,9 +17,12 @@
     <string name="logged_in">Logged in</string>
     <string name="you_are_logged_in">You\'re logged in!</string>
     <string name="you_are_not_logged_in_yet">You are not logged in yet</string>
+
     <string name="insert_the_new_game_name_here">Insert the new game name here</string>
+    <string name="insert_the_new_game_subtype_here">Insert the new game subtype here</string>
     <string name="name_of_the_game">Name of the game</string>
     <string name="subtype_of_the_game">Subtype of the game</string>
     <string name="delete_all_games_from_database">Delete all games from database</string>
+
 
 </resources>
